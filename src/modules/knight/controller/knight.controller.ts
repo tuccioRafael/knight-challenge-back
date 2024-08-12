@@ -1,31 +1,35 @@
 import { Controller, Delete, Get, Param, Post, Put } from "@nestjs/common";
+import { KnightService } from "../service/knight.service";
+
 
 
 @Controller('knights')
 export class KnightController {
 
+  constructor(private readonly knightService: KnightService) { }
+
   @Get()
   getAllKnights(): string {
-    return 'retorna todos os cavaleiros';
+    return this.knightService.findAll();
   }
 
   @Get(':id')
   getKnightById(@Param('id') id: string): string {
-    return `retorna cavaleiro do ${id}`;
+    return this.getKnightById(id);
   }
 
   @Post()
   createKnight(): string {
-    return 'cria um cavaleiro';
+    return this.knightService.create();
   }
 
   @Delete(':id')
   deleteKnight(@Param('id') id: string): string {
-    return `deleta o cavaleiro do ${id}`;
+    return this.knightService.becomeAHero(id);
   }
 
   @Put(':id')
   updateKnight(@Param('id') id: string): string {
-    return `edita o cavaleido de id ${id}`;
+    return this.knightService.updateNickName(id);
   }
 }
