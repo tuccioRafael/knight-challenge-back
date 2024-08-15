@@ -2,18 +2,6 @@
 
 Este projeto é uma API para o cadastro e gerenciamento de cavaleiros, desenvolvida usando [NestJS](https://nestjs.com/) com Mongoose para o banco de dados MongoDB.
 
-## Índice
-
-- [Recursos](#recursos)
-- [Tecnologias Utilizadas](#tecnologias-utilizadas)
-- [Instalação](#instalação)
-- [Configuração](#configuração)
-- [Uso](#uso)
-- [Estrutura do Projeto](#estrutura-do-projeto)
-- [Endpoints](#endpoints)
-- [Testes](#testes)
-- [Contribuição](#contribuição)
-
 ## Recursos
 
 - **Cadastro de Cavaleiros:** Criação, leitura, atualização e exclusão (soft delete) de cavaleiros.
